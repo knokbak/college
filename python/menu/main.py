@@ -6,13 +6,16 @@
 # Menu system library
 # OK - 26 Sep 2023
 
-MenuItem = tuple[str, callable]
+from typing import Any, Callable
 
-def prompt_menu(menu_title: str, items_list: list[MenuItem]) -> tuple[str, any]:
+MenuItem = tuple[str, Callable]
+
+# Returns the selected option (0) and the function's response (1) as a tuple.
+def prompt_menu(menu_title: str, items: list[MenuItem]) -> tuple[MenuItem, Any]:
     print(menu_title)
     print('-' * 25)
-    for i in range(len(items_list)):
-        item = items_list[i]
+    for i in range(len(items)):
+        item = items[i]
         print(f'{i+1}.  {item[0]}')
     print('-' * 25)
     
@@ -21,11 +24,11 @@ def prompt_menu(menu_title: str, items_list: list[MenuItem]) -> tuple[str, any]:
         result = int(result)
     except ValueError:
         print('That is not a number!')
-        return prompt_menu(menu_title, items_list)
+        return prompt_menu(menu_title, items)
     
-    if result < 1 or result > len(items_list):
+    if result < 1 or result > len(items):
         print('That is not a valid option!')
-        return prompt_menu(menu_title, items_list)
+        return prompt_menu(menu_title, items)
     
-    item = items_list[result - 1]
-    return (result, item[1]())
+    item = items[result - 1]
+    return (item, item[1]())
