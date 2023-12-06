@@ -1,3 +1,8 @@
+############################################################
+# Licensed under the BSD 3-Clause License                  #
+# See https://github.com/knokbak/college/blob/main/LICENSE #
+############################################################
+
 def division(a, b):
     try:
         val = float(a) / float(b)

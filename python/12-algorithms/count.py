@@ -1,3 +1,8 @@
+############################################################
+# Licensed under the BSD 3-Clause License                  #
+# See https://github.com/knokbak/college/blob/main/LICENSE #
+############################################################
+
 def count_duplicates(array: list, value: str) -> int:
     count = 0
     for item in array:

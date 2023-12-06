@@ -1,4 +1,9 @@
-def find_min(arr: list[int | float]) -> float:
+############################################################
+# Licensed under the BSD 3-Clause License                  #
+# See https://github.com/knokbak/college/blob/main/LICENSE #
+############################################################
+
+def find_min(arr: 'list[int | float]') -> float:
     if len(arr) == 0:
         raise ValueError('Cannot find minimum value of empty list')
     

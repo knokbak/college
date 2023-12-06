@@ -1,3 +1,8 @@
+############################################################
+# Licensed under the BSD 3-Clause License                  #
+# See https://github.com/knokbak/college/blob/main/LICENSE #
+############################################################
+
 def valid_input(prompt: str) -> int:
     while True:
         try:
