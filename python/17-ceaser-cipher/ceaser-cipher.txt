@@ -1,0 +1,29 @@
+ENCRYPT VALUE
+    value IS string
+    key IS integer
+    encrypted IS empty string
+    FOR character IN value
+        GET CIPHER AS cipher
+        APPEND cipher TO encrypted
+    END FOR
+    RETURN encrypted
+END ENCRYPT VALUE
+
+DECRYPT VALUE
+    value IS string
+    key IS integer
+    decrypted IS empty string
+    FOR character IN value
+        GET CIPHER AS cipher
+        APPEND cipher TO decrypted
+    END FOR
+    RETURN encrypted
+END DECRYPT VALUE
+
+GET CIPHER
+    value IS string
+    key IS integer
+    GET UNICODE OF value AS unicode
+    ADD key TO unicode
+    RETURN CONVERT unicode TO string
+END GET CIPHER

@@ -1,0 +1,25 @@
+DECLARE list AS ARRAY OF INTEGER INITIALLY []
+DECLARE total AS INTEEGER INITIALLY 0
+
+LOOP FOR 7 AS count
+    RECEIVE input AS INTEGER FROM KEYBOARD
+    ADD input TO list
+    SET total TO total + input
+END LOOP
+
+DECLARE average AS total / 7
+DECLARE min AS INTEGER INITIALLY 0
+DECLARE max AS INTEGER INITIALLY 0
+
+LOOP FOR 7 AS count
+    IF tickets[count] SMALLER THAN tickets[min]
+        SET min TO count
+    END IF
+    IF tickets[count] LARGER THAN tickets[max]
+        SET max TO count
+    END IF
+END LOOP
+
+PRINT "Average: {average}"
+PRINT "Minimum: {tickets[min]}"
+PRINT "Maximum: {tickets[max]}"
