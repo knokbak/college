@@ -1,10 +1,4 @@
-############################################################
-# Licensed under the BSD 3-Clause License                  #
-# See https://github.com/knokbak/college/blob/main/LICENSE #
-############################################################
-
-# Encrypt/decrypt values with a Ceaser cipher
-# OK - 24 Jan 2024
+F
 
 import sys
 

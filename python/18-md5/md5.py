@@ -1,3 +1,11 @@
+############################################################
+# Licensed under the BSD 3-Clause License                  #
+# See https://github.com/knokbak/college/blob/main/LICENSE #
+############################################################
+
+# Determine hash values using rockyou1000.txt
+# OK - 1 Feb 2024
+
 import hashlib
 
 def hash_my_password(inputPass):
